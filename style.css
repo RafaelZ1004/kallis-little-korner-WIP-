@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .crafty-girls-regular {
+  font-family: "Crafty Girls", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+ */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body{
+    margin: 0;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    border: double 3px rgb(202, 202, 202);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 1px 1px 10px 0px rgb(218, 216, 216);
+    background-color: #FCFEFC;
+    margin: 0;
+    opacity: 95%;
+}
+.rightheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.leftheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+header img{
+    height: 110%;
+    width: 110px;
+    max-height: 90px;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: rgb(85, 2, 53);
+}
+.navbar ul li :hover{
+    color: #996885;
+}
+.search{
+    display: flex;
+    background-color: #FAE8F5;
+    border-radius: 50px;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+.search input{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 15px; 
+    outline: none;
+    border-radius: 50px;
+    background-color: transparent;
+    align-items: center;
+    margin: auto;
+}
+.searchicon{
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.icons:hover{
+    transform: scale(1.1);  
+}
+.firstsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 540px;
+    background-image: url("little kalli korner section (2).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+  font-style: normal;
+    font-size: 28px;
+    height: 35%;
+    width: 50%;
+    color: #330324;
+    margin-bottom: 10px;
+}
+#lk{
+    background: linear-gradient(to right, #C29DB6, #F6A7B9, #F29CA5, #7A9A8E, #F4C742);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#discover{
+    font-family: "Playwrite US Modern", cursive;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    color: #4e0537; 
+}
+.secondsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    border: solid 1px;
+    padding: 10px;
+    border: double 3px rgb(202, 202, 202);
+    box-shadow: 1px 1px 10px 0px rg;
+    border-left: none;
+    border-right: none;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding: 0 30px 0 30px;
+}
+.container .incontainer{
+    display: flex;
+    align-items: center;
+    width: 230px;
+    height: 100%;
+    padding: 0 10px 0 10px;
+    gap: 20px;
+}
+.incontainer .circle{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 150px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+.cletters{
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    flex-direction: column;
+}
+/* Nav choices for products
+ */
+#productchoices{
+    display: flex;
+    border: solid 1px rgb(202, 202, 202);
+    box-shadow: 0px 3px 5px 2px rgb(218, 216, 216);
+    width: 700px;
+    height: 60px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 15px;
+    overflow: hidden;
+}
+#productchoices ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+#productchoices li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    cursor: pointer;
+    height: 100%;
+    width: 25%;
+    transition: ease 0.3s;
+}
+#productchoices li:hover{
+    background-color: #FFB6C1;
+}
+#productchoices li:active{
+    background: linear-gradient(#FFB6C1, #FFE873);
+}
+#productchoices li.active{
+    background: linear-gradient(#FFB6C1, #FFE873);
+}
+#productchoices li a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: "Playwrite US Modern", cursive;
+    font-style: normal;
+    font-size: 20px;
+    color: navy;
+    pointer-events: none;
+}
+.products{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.hidden{
+    display: none !important;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 43px;
+    padding: 0 10px 0 10px;
+    margin: 10px 0 20px 0;
+    justify-content: center;
+} 
+.productcard{
+    display: flex;
+    height: 400px;
+    width: 270px;
+    flex-direction: column;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px 3px rgb(218, 216, 216);
+    cursor: pointer;
+    position: relative;
+    gap: 0;
+}
+.img-wrapper{
+    overflow: hidden;
+    height: 300px;
+}
+.img-wrapper img{
+    position: relative;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    object-position: center; 
+}
+.productcard:hover img{
+    transform: scale(1.1);
+}
+.productcard:hover #add_cart{
+    bottom: 105px;
+}
+.productcard:hover #favorite{
+    opacity: 100;
+}
+#belowimg{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: white;
+    position: relative;
+}
+#add_cart{
+    background-color: #F4C742;
+    border-radius: 50px;
+    border: none;
+    align-self: center;
+    position: absolute;
+    bottom: 70px;            
+    transition: bottom 0.5s ease; 
+    padding: 3px 5px;
+    color: #330324;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    font-size: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#add_cart:hover{
+    background-color: #ddb437;
+}
+#favorite{
+    align-self: flex-end;
+    margin: 5px 5px 0 0;
+    z-index: 1;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: #F8F8F8;
+    transition: 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+}
+#favorite:hover{
+    background-color: #EABD30;
+}
+.productcard p, h3{
+    padding: 0 10px 0 10px;
+}
+.productname{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.productchoice{
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: gray;
+    font-weight: 500;
+}
+.productprice{
+    padding-top: 5px;
+    font-size: 20px;
+}
+.footercontainer{
+    display: flex;
+    width: 100%;
+    border: double 3px rgb(202, 202, 202);
+    border-left: none;
+    border-right: none;
+    box-shadow: 1px 1px 10px 0px rgb(218, 216, 216);
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    background-color: #FAE8F5;
+    flex-direction: column;
+}
+#up{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 0 40px 0 40px;
+}
+#down{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    border-top: 1px solid rgb(167, 167, 167);
+}
+.insidefootercontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+.insidefootercontainer ul{
+    margin-top: 30px;
+    list-style-type: none;
+}
+.insidefootercontainer ul li a{
+    text-decoration: none;
+    color: #4e0537;
+}
+.insidefootercontainer ul li a:hover{
+    color: #996885;
+}
+.insidefootercontainer ul li{
+    margin-bottom: 15px;
+}
+#happykids{
+    padding-right: 100px;
+}
+.socialmedia{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+.socialmedia button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    border-color: transparent;
+    background-color: transparent;
+}
+.socialmedia button:hover{
+    background-color: #F4C742;
+}
+.socialmedia button svg{
+    width: 50%;
+    height: 50%;
+    color: #3b052a;
+}
+#little{
+    color: #360426;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+}
+.klklogo img{
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+#stayupdated{
+    gap: 20px;
+}
+#newsletter input{
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    width: 210px;
+}
+#newsletter button{
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 5px;
+    width: 210px;
+    background-color: #F4C742;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
