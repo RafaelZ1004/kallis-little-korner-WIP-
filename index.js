@@ -1,4 +1,5 @@
-  const links = document.querySelectorAll(".choices_link");
+ // code for switching between sections using the navbar for the products
+ const links = document.querySelectorAll(".choices_link");
   const sections = document.querySelectorAll(".product-list");
 
 links.forEach(link => {
@@ -15,7 +16,7 @@ links.forEach(link => {
   });
 });
 
-// products list
+// array for the products
 const set_products = [
   {
     image:"clothesimages/Sets/S1.jpg",
@@ -198,6 +199,7 @@ const pajama = document.getElementById("pajamasproducts");
 const dress = document.getElementById("dressproducts");
 const paint = document.getElementById("paintproducts");
 
+//function to add the product cards and inserting the data from the arrays
 function displayProducts(products_array, sectionID){
   products_array.forEach(product => {
   sectionID.innerHTML += `
@@ -216,7 +218,6 @@ function displayProducts(products_array, sectionID){
   `;
 });
 }
-
 displayProducts(set_products, set);
 displayProducts(pajamas_products, pajama);
 displayProducts(dress_products, dress);
