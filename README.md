@@ -25,7 +25,7 @@ I used Figma's AI to create a sample website layout and design and converted it 
 - HTML5
 - CSS3
 - Javascript (Vanilla)
-- Figma AI
+- Figma
 - Canva
 
 # Status
