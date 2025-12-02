@@ -21,12 +21,12 @@
 
     <header>
         <div class="leftheader">
-            <img src="images/littlekallikorner.png" alt="">
+            <a href="index.html"><img src="images/littlekallikorner.png" alt=""></a>
             <div class="navbar">
                 <ul class="navlinks">
-                    <li><a href="index.html ">Home</a></li>
+                    <li><a href="#firstsection">Home</a></li>
                     <li><a href="#products">Products</a></li>
-                    <li><a href="">Inquiry</a></li>
+                    <li><a href="#clay-inquiry">Clay</a></li>
                     <li><a href="#foot">Contact</a></li>
                 </ul>
             </div>
@@ -85,6 +85,7 @@
                 <li class="choices_link" data-section="dressproducts"><a href="">Dress</a></li>
                 <li class="choices_link" data-section="paintproducts"><a href="">Paint by Numbers</a></li>
             </ul>
+            <span id="highlight"></span>
         </nav>
 
         <section id="setproducts" class="product-list"></section>
@@ -96,9 +97,57 @@
         <section id="paintproducts" class="product-list hidden"></section>
     </section>
 
+    <section id="clay-inquiry">
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide"><div class="sample"><h3>Sample Keychain</h3></div><img src="images/milktea keychain.jpg" alt="Slide 1"></div>
+                <div class="carousel-slide"><div class="sample"><h3>Sample Keychain</h3></div><img src="images/Dog keychain.jpg" alt="Slide 2"></div>
+                <div class="carousel-slide"><div class="sample"><h3>Sample Earrings</h3></div><img src="images/red earrings.jpg" alt="Slide 3"></div>
+                <div class="carousel-slide"><div class="sample"><h3>Sample Earrings</h3></div><img src="images/flower earrings.jpg" alt="Slide 4"></div>
+                <div class="carousel-slide"><div class="sample"><h3>Sample Hairclip</h3></div><img src="images/kalli hairclip.jpg" alt="Slide 5"></div>
+                <div class="carousel-slide"><div class="sample"><h3>Sample Hairclip</h3></div><img src="images/flower hairclip.jpg" alt="Slide 6"></div>
+            </div>
+
+            <div class="carousel-buttons">
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+            </div>
+        </div>
+        <div class="inquire">
+            <h1>Handmade Custom Clay Products</h1>
+            <h3>From keychains, earrings, and hairclips to unique figurines, we craft each clay piece by hand. We also create customized designs for businesses and personal gifts. Every item is carefully made to match your style and ideas.</h3>
+            <div class="inquire-buttons">
+                <button id="send-request">Send Your Design Request &#10132;</button>
+                <a href="https://www.facebook.com/littlekalliskorner" target="_blank"><button>Inquire Via Facebook &#10132;</button></a>
+            </div>
+        </div>
+    </section>
+
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Personalized Clay Inquiry</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Design Details:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label for="file">Reference Photo: (Optional)</label>
+                <input type="file" id="file" name="file">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
         <footer class="footercontainer" id="foot">
             
-            <div id="up">
+            <div id="upper-footer">
                 <div class="insidefootercontainer" id="happykids">
                 <div class="klklogo">
                     <img src="images/night.png" alt="">
@@ -149,7 +198,7 @@
             </div>
             </div>
 
-            <div id="down">
+            <div id="lower-footer">
                 <p style="color: #858585; font-size: 15px;">© 2025 Little Kalli's Korner. All rights reserved.</p>
             </div>
 

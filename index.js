@@ -15,6 +15,34 @@ links.forEach(link => {
     document.getElementById(link.dataset.section).classList.remove("hidden");
   });
 });
+//code for animation on the navbar for products
+const highlight = document.getElementById("highlight");
+
+// initialize highlight position on page load
+window.addEventListener("load", () => {
+  const active = document.querySelector(".choices_link.active");
+  moveHighlight(active);
+});
+
+links.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // remove active from all
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+
+    moveHighlight(link);
+  });
+});
+
+function moveHighlight(element) {
+  const rect = element.getBoundingClientRect();
+  const parentRect = element.parentElement.getBoundingClientRect();
+
+  highlight.style.width = rect.width + "px";
+  highlight.style.left = rect.left - parentRect.left + "px";
+}
 
 // array for the products
 const set_products = [
@@ -222,3 +250,48 @@ displayProducts(set_products, set);
 displayProducts(pajamas_products, pajama);
 displayProducts(dress_products, dress);
 displayProducts(paint_products, paint);
+
+// clay section
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+let currentIndex = 0;
+
+function updateCarousel() {
+  track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
+}
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+// automatic slide
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+
+//code for pop-up form
+const openBtn = document.getElementById("send-request");
+const popup = document.getElementById("popupForm");
+const closeBtn = document.querySelector(".close-btn");
+
+openBtn.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == popup) {
+    popup.style.display = "none";
+  }
+});
