@@ -7,8 +7,12 @@
   font-family: "Crafty Girls", cursive;
   font-weight: 400;
   font-style: normal;
+  font-family: "Poppins", sans-serif;
 }
  */
+ /* font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
@@ -35,11 +39,8 @@ header{
     top: 0;
     width: 100%;
     position: fixed;
-    border: double 3px rgb(202, 202, 202);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    box-shadow: 1px 1px 10px 0px rgb(218, 216, 216);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 6px 14px rgba(0, 0, 0, 0.06);
     background-color: #FCFEFC;
     margin: 0;
     opacity: 95%;
@@ -117,31 +118,163 @@ header img{
 .icons:hover{
     transform: scale(1.1);  
 }
+/* END OF HEADER */
 
-/* hero section - first section */
+/* HERO SECTION - first section */
 .hero-section{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
-    height: 540px;
-    background-image: url("images/little kalli korner section (2).png");
+    background-image: url("images/little kalli korner section (3).png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    padding: 30px 20px 40px 20px;
 }
-.heading{
+.hero-left{
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    padding: 0 50px 0 50px;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px 0 0 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text h1{
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    color: #3b052a;
+}
+.hero-text button{
+    width: 250px;
+    height: 60px;
+    border: none;
+    background-image: url("images/yellow brush.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+.hero-text button:hover{
+    transform: translateY(-4px) scale(1.04);
+}
+.hero-text button:active{
+    transform: scale(0.95);
+}
+.hero-features{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+.features-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.hero-right{
+    display: flex;
+    width: 45%;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+}
+.image1, .image2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image1 img{
+    width: 100%;
+    height: 100%;
+}
+.image2 img{
+    width: 100%;
+    height: 100%;
+}
+#img1-container{
     display: flex;
     justify-content: center;
-    text-align: center;
-    font-family: "Abril Fatface", serif;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 400px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#img2-container, #img3-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    height: 340px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#hover-background{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: 1;
+    background-color: black;
+    transition: 0.3s ease;
+}
+#hover-text{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    font-weight: 400;
     font-style: normal;
-    font-size: 28px;
-    height: 35%;
-    width: 50%;
-    color: #330324;
-    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    transition: 0.3s ease;
+    user-select: none;
+}
+.img-container{
+    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(44, 44, 44, 0.411);
+}
+.img-container:hover{
+    transform: rotate(2deg);
+}
+.img-container:hover #hover-background{
+    opacity: 45%;
+}
+.img-container:hover #hover-text{
+    opacity: 100%;
 }
 #lk{
     background: linear-gradient(to right, #C29DB6, #F6A7B9, #F29CA5, #7A9A8E, #F4C742);
@@ -149,73 +282,28 @@ header img{
     -webkit-text-fill-color: transparent;
 }
 #discover{
-    font-family: "Playwrite US Modern", cursive;
-    width: 40%;
-    text-align: center;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 20px;
     color: #4e0537; 
 }
+/* END OF HERO SECTION */
 
-/* 2nd section */
-.features{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-    border: solid 1px;
-    padding: 10px;
-    border: double 3px rgb(202, 202, 202);
-    box-shadow: 1px 1px 10px 0px rg;
-    border-left: none;
-    border-right: none;
-    
-    
-}
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 70%;
-    padding: 0 30px 0 30px;
-}
-.container .incontainer{
-    display: flex;
-    align-items: center;
-    width: 230px;
-    height: 100%;
-    padding: 0 10px 0 10px;
-    gap: 20px;
-}
-.incontainer .circle{
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border-radius: 150px;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-}
-.cletters{
-    width: 100%;
-    height: 70%;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* products */
+/* PRODUCTS SECTION */
 .products{
     display: flex;
     width: 100%;
     height: auto;
     flex-direction: column;
     padding-bottom: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
 }
 #product-choices{
     display: flex;
     border: solid 1px rgb(202, 202, 202);
-    box-shadow: 0px 3px 5px 2px rgb(218, 216, 216);
+    box-shadow: 0 6px 18px rgba(44, 44, 44, 0.411);
     width: 700px;
     height: 60px;
     align-self: center;
@@ -258,7 +346,7 @@ header img{
     font-family: "Playwrite US Modern", cursive;
     font-style: normal;
     font-size: 20px;
-    color: navy;
+    color: #360426;
     pointer-events: none;
     user-select: none;
 }
@@ -282,10 +370,14 @@ header img{
     flex-direction: column;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0px 0px 4px 3px rgb(218, 216, 216);
     cursor: pointer;
     position: relative;
     gap: 0;
+    box-shadow: 0 6px 18px rgba(44, 44, 44, 0.411);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
 }
 .product-card:hover img{
     transform: scale(1.1);
@@ -370,6 +462,7 @@ header img{
     padding-top: 5px;
     font-size: 20px;
 }
+/* END OF PRODUCTS SECTION */
 
 /* CLAY SECTION */
 #clay-inquiry{
@@ -377,15 +470,15 @@ header img{
     display: flex;
     justify-content: space-between;
     width: auto;
-    padding: 30px 60px 30px 60px;
+    padding: 10px 60px 10px 60px;
     background: linear-gradient(-120deg,#FFB6C1, #FFE873);
     border-radius: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 18px rgba(44, 44, 44, 0.411);
 }
-.carousel{
+.clay-carousel{
     position: relative;
     width: 40%;
-    height: 75vh;
+    height: 550px;
     overflow: hidden;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -465,7 +558,8 @@ header img{
     padding: 0 5px 0 5px;
 }
 .inquire-buttons button:hover{
-    background-color: #997a1f;
+    box-shadow: 0 6px 18px rgba(44, 44, 44, 0.411);
+    transform: translateY(-4px) scale(1.04);
 }
 .popup{
     display: none;
@@ -528,15 +622,14 @@ header img{
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+/* END OF CLAY SECTION */
 
-/* footer */
+/* FOOTER SECTION */
 .footercontainer{
     display: flex;
     width: 100%;
-    border: double 3px rgb(202, 202, 202);
-    border-left: none;
-    border-right: none;
-    box-shadow: 1px 1px 10px 0px rgb(218, 216, 216);
+    border-top: 2px solid rgba(255, 182, 193, 0.45); /* soft pink border */
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.10), 0 -2px 6px rgba(255, 182, 193, 0.25); 
     justify-content: space-around;
     align-content: center;
     align-items: center;
@@ -644,3 +737,4 @@ header img{
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
+/* END OF FOOTER SECION */

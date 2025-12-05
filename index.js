@@ -18,7 +18,7 @@ links.forEach(link => {
 //code for animation on the navbar for products
 const highlight = document.getElementById("highlight");
 
-// initialize highlight position on page load
+//initialize highlight position on page load
 window.addEventListener("load", () => {
   const active = document.querySelector(".choices_link.active");
   moveHighlight(active);
@@ -28,7 +28,7 @@ links.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // remove active from all
+    //remove active from all
     links.forEach(l => l.classList.remove("active"));
     link.classList.add("active");
 
@@ -252,30 +252,36 @@ displayProducts(dress_products, dress);
 displayProducts(paint_products, paint);
 
 // clay section
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.next');
-const prevButton = document.querySelector('.prev');
-let currentIndex = 0;
+const carousels = document.querySelectorAll('.carousel');
 
-function updateCarousel() {
-  track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
-}
+carousels.forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = carousel.querySelector('.next');
+    const prevButton = carousel.querySelector('.prev');
+    let currentIndex = 0;
 
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    // Auto-slide
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }, 5005);
 });
 
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
-});
-// automatic slide
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  }, 5000);
 
 //code for pop-up form
 const openBtn = document.getElementById("send-request");
