@@ -910,7 +910,6 @@ h3 {
 
     .socialmedia {
         justify-content: center;
-        flex-wrap: wrap;
     }
 }
 
@@ -1002,4 +1001,10 @@ h3 {
 .item-card-text h3 {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+@media (max-width: 500px) {
+    #wishlist {
+        width: 100vw;
+    }
 }
