@@ -152,7 +152,7 @@ header img {
     background-image: url("images/little kalli korner section (3).png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     padding: 30px 20px 40px 20px;
 }
 
@@ -936,7 +936,9 @@ header img {
 
 .join-icons-container {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .icon {
