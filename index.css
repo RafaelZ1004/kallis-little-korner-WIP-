@@ -30,6 +30,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* header */
@@ -751,8 +752,9 @@ header img {
 
 @media (max-width: 600px) {
     #clay-inquiry {
-        padding: 20px;
         border-radius: 25px;
+        margin: 0 15px;
+        padding: 20px;
     }
 
     .clay-carousel {
@@ -967,6 +969,7 @@ header img {
 @media (max-width: 600px) {
     .join-container form {
         flex-direction: column;
+        width: 100%;
     }
 }
 
@@ -1123,7 +1126,6 @@ header img {
 
     .socialmedia {
         justify-content: center;
-        flex-wrap: wrap;
     }
 }
 
@@ -1214,7 +1216,8 @@ header img {
     right: 0;
     top: 0;
     height: 100%;
-    width: 400px;
+    width: min(400px, 100vw);
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
@@ -1293,4 +1296,9 @@ header img {
 .item-card-text h3 {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+@media (max-width: 500px) {
+    #wishlist {
+        width: 100vw;
+    }
 }
